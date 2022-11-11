@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About</title>
+<script src="js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="./About.css">
+</head>
+
+<body>
+	<div class="content">
+     <div class="list">
+   	  <img src="image/dasong.jpg" alt="" title="1">
+   	  <img src="image/dasong3.jpg" alt="" title="2"/>
+   	  <img src="image/dasong2.jpg" alt="" title="3"/>
+   	  <img src="image/motong.jpg" alt="" title="4"/>
+   	  <img src="image/jinyi.jpg" alt="" title="5"/>
+   </div>
+   <div class="pointer">
+   	  <span index="1" class="on"></span>
+   	  <span index="2"></span>
+   	  <span index="3"></span>
+   	  <span index="4"></span>
+   	  <span index="5"></span>
+   </div>
+   <div class="arrow left">
+   &gt;
+   </div>
+   <div class="arrow right">
+    &lt;
+    </div>
+     <p class="title">关于我们，关于影视</p> <p class="titles">About us,About film and television</p>
+     <ul id="top-nav" class="ribbon">
+      <li><a href="Index.html"> <span>首页</span></a></li>
+      <li><a href="About.html"> <span>关于</span></a></li>
+      <li><a href="Middlecontent.html"> <span>榜单</span></a></li>
+      <li><a href="Information.html"> <span>影视资讯</span></a></li>
+    </ul>
+	<div id="About" class="About">
+    <p id="ab" class="h3">关于我们</p>
+		<div class="share">
+			<p>
+				《大宋少年志》<br>
+				人生在世，无论聪慧愚笨，都独一无二，自有精彩之处。<br>
+				有幸报国，不负少年<br>
+				世道本就不公，你又待如何？<br>
+				世间万物阻我，不死便不屈<br>
+				就算黑暗里行事，心里也该有光才是。
+			</p>
+		</div>
+  </div>
+	</div>
+	<script>
+	  /*var imgCount=5;
+	  var index=1;
+	  var myInterval;
+	  var buttonSpan=$(".pointer")[0].children;
+	  $(".left").click(function(){
+		  nextPage(true);
+	  });
+	  $(".right").click(function(){
+		  nextPage(false);
+	  });
+	  clickSpans();
+	  autoPage();
+	  
+	  function autoPage(){
+		  setInterval(function(){
+			  nextPage(true);
+		  },3000);
+	  }
+	  function clickSpans(){
+		  for(var i=0;i<buttonSpan.length;i++){
+			  buttonSpan[i].onclick=function(){
+				  var index=$(this).attr("index");
+				  targetLeft=-600*(index-1);
+				  $(".list").animate({left:targetLeft+"px"},1000);
+				  $(this).addClass("on");
+				  $(this).siblings().removeClass("on");
+			  }
+		  }
+	  }
+	  
+	  function nextPage(next){
+		  var targetLeft=0;
+		  $(buttonSpan[index-1]).removeClass("on");
+		  if(next){
+			  if(index==5){
+				  index=1;
+				  targetLeft=0;
+			  }else{
+				  index++;
+				  targetLeft=-1920*(index-1);
+			  }
+			  
+		  }else{
+			  if(index==1){
+				  index=5;
+				  targetLeft=-1920*(imgCount-1);
+			  }else{
+				  index--;
+				  targetLeft=-1920*(index-1);
+			  }
+			  
+		  }
+		 $(".list").animate({left:targetLeft+"px"},1000);
+		 $(buttonSpan[index-1]).addClass("on");
+	  }*/
+			  /*核心代码*/
+	  var imgCount=5;/*定义图片数量*/
+	  var index=1;/*定义索引*/
+	  var myInterval;/*定义定时器变量*/
+	  var buttonSpan=$(".pointer")[0].children;/*获取span标签*/
+	  /*alert(buttonSpan.length);*/
+	  $(".left").click(function(){/*切换到下一张*/
+		  nextPage(true);
+	  });
+	  $(".right").click(function(){/*切换到下一张*/
+		  nextPage(false);
+	  });
+	  clickSpans();/*调用原点按钮切换图片的方法*/
+	  autoPage();/*调用自动轮播函数*/
+	  
+	  function autoPage(){/*自动轮播*/
+		  setInterval(function(){
+			  nextPage(true);
+		  },3000);
+	  }
+	  function clickSpans(){/*点圆点切换到对应的图片*/
+		  for(var i=0;i<buttonSpan.length;i++){
+			  buttonSpan[i].onclick=function(){
+				  /*$(buttonSpan[index-1]).removeClass("on");*//*去掉旧的原点的背景色*/
+//				  if($(this).attr("index")==1){/*判断，如果当前是第一张图片，切换到最后一张*/
+//					  index=5;
+//				  }
+//				  nextPage(true);/*调用切换图片的函数*/
+				  var index=$(this).attr("index");
+				  targetLeft=-600*(index-1);
+				  $(".list").animate({left:targetLeft+"px"},1000);
+				  
+				  $(this).addClass("on");/*添加样式*/
+				  $(this).siblings().removeClass("on");
+			  }
+		  }
+	  }
+	  /*nextPage(true);*/
+	  function nextPage(next){/*定义切换到上一张，下一张的函数,next=true下一张，next=false上一张*/
+		  var targetLeft=0;/*定义div要移动的距离*/
+		  $(buttonSpan[index-1]).removeClass("on");/*清楚旧的圆点span的背景色*/
+//		  alert(1);
+		  if(next){/*下一张*/
+			  if(index==5){/*到最后一张图片时切换到第一张图片*/
+				  index=1;
+				  targetLeft=0;
+			  }else{
+				  index++;
+				  targetLeft=-1920*(index-1);
+			  }
+			  
+		  }else{/*上一张*/
+			  if(index==1){/*到第一张切换到最后一张*/
+				  index=5;
+				  targetLeft=-1920*(imgCount-1);
+			  }else{
+				  index--;
+				  targetLeft=-1920*(index-1);
+			  }
+			  
+		  }
+		  /*alert(index);*/
+		 $(".list").animate({left:targetLeft+"px"},1000);
+		 $(buttonSpan[index-1]).addClass("on");
+	  }
+  </script>
+</body>
+</html>

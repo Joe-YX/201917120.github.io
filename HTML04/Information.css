@@ -1,0 +1,334 @@
+/* CSS Document */
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.content{
+    background-color: rgb(215, 250, 225);
+    width: 100%;
+    box-sizing: border-box;
+	height: 2160px;
+}
+.title {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 450px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.titles {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    top: 520px;
+    margin: auto;
+    bottom: 0;
+    color: #fff;
+    font-size: 55px;
+    font-weight: 500;
+}
+.ribbon li{
+	list-style: none;
+}
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 300px;
+    top: 50px;
+    margin: auto;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.content #Information{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    /* background-color: aqua; */
+    /*display: none;*/
+     /*display: block; */
+}
+.content #Information h3{
+    position: absolute;
+    width: 150px;
+    border-top:5px solid rgb(17, 117, 156);
+    border-bottom:5px solid skyblue;
+    top: 30px;
+    left: 0;
+}
+.content #Information #Mlist{
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 35px;
+}
+#Information #Mlist li{
+    float: left;
+    margin-left: 10px;
+    /*width: 270px;
+    height: 35px;*/
+	width: 300px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+}
+#Information .Mbox1{
+    
+    position: absolute;
+    top: 125px;
+    left: 210px;
+    width: 1550px;
+    /* height: 500px; */
+    
+    /* background-color: coral; */
+    background-color: #EBA8B2;
+    display: none;
+}
+#Information .Mbox1 #ul1{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #666;
+}
+#Information #ul1 .i1{
+    float: left;
+    width: 50%;
+    height: 100px;
+}
+.Mbox1 #ul1 .Mbox-pic1{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.Mbox1 #ul1 .Mbox-pic1 img{
+    margin-top: -49px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Mbox1 .i1 .Mbox-font1{
+    display: inline-block;
+    height: 100px;
+}
+.Mbox1 .i1 .Mbox-font1 p:first-child{
+    width: 200px;
+    height: 26px;
+    font-size: 10px;
+}
+.Mbox-font1 p span{
+    font-size: 10px;
+    color: #666;
+}
+.Mbox1 .i1 .Mbox-font1 p:last-child{
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgb(40, 211, 114);
+    border-radius: 12%;
+    color: snow;
+}
+.Mbox-font1 p:last-child a{
+    color: snow;
+}
+
+#Information .Mbox2{
+    
+    position: absolute;
+    top: 125px;
+    left: 210px;
+    width: 1550px;
+    background-color: #99F3C2;
+    display: none;
+}
+#Information .Mbox2 #ul2{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #666;
+}
+#Information #ul2 .i2{
+    float: left;
+    width: 50%;
+    height: 100px;   
+}
+.Mbox2 #ul2 .Mbox-pic2{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.Mbox2 #ul2 .Mbox-pic2 img{
+    margin-top: -49px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Mbox2 .i2 .Mbox-font2{
+    display: inline-block;
+    height: 100px;
+}
+.Mbox2 .i2 .Mbox-font2 p:first-child{
+    width: 200px;
+    height: 26px;
+    font-size: 10px;
+}
+.Mbox-font2 p span{
+    font-size: 10px;
+    color: #666;
+}
+.Mbox2 .i2 .Mbox-font2 p:last-child{
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgb(40, 211, 114);
+    border-radius: 12%;
+    color: snow;
+}
+.Mbox-font2 p:last-child a{
+    color: snow;
+}
+
+#Information .Mbox3{
+    
+    position: absolute;
+    top: 125px;
+    left: 210px;
+    width: 1550px;
+    background-color: #9ADBE0;
+    display: none;
+}
+#Information .Mbox3 #ul3{
+    width: 100%;
+    height: 100px;
+    border-top: 1px solid #666;
+}
+#Information #ul3 .i3{
+    float: left;
+    width: 50%;
+    height: 100px;
+}
+.Mbox3 #ul3 .Mbox-pic3{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
+.Mbox3 #ul3 .Mbox-pic3 img{
+    margin-top: -49px;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.Mbox3 .i3 .Mbox-font3{
+    display: inline-block;
+    height: 100px;
+}
+.Mbox3 .i3 .Mbox-font3 p:first-child{
+    width: 200px;
+    height: 26px;
+    font-size: 10px;
+}
+.Mbox-font3 p span{
+    font-size: 10px;
+    color: #666;
+}
+.Mbox3 .i3 .Mbox-font3 p:last-child{
+    width: 80px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    background-color: rgb(40, 211, 114);
+    border-radius: 12%;
+    color: snow;
+}
+.Mbox-font3 p:last-child a{
+    color: snow;
+}
